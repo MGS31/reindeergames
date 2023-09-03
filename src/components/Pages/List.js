@@ -11,7 +11,6 @@ const List = () => {
   ]);
   const [toggle, setToggle] = useState(false);
   const inputRef = useRef();
-  const selectRef = useRef();
 
   const handleChange = (e, index) => {
     const values = [...formValues];
@@ -39,7 +38,10 @@ const List = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sessionStorage.setItem('Reindeer-Names', formValues);
+    const users = formValues.map((val) => {
+      return [val.value];
+    });
+    sessionStorage.setItem('Reindeer-Names', users);
   };
 
   const addBtnClick = (e) => {
