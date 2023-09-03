@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -11,7 +12,9 @@ const Home = () => {
           Elephant or any other group based games started
         </p>
         <p>Look no further than Reindeer Games! Click Below to get started!</p>
-        <h5>Lets Get Started</h5>
+        <h5>
+          <Link to="/List">Lets Get Started</Link>
+        </h5>
       </div>
     </div>
   );
