@@ -44,8 +44,7 @@ const List = () => {
     });
     sessionStorage.setItem('Reindeer-Names', JSON.stringify(users));
     let sessionNames = JSON.parse(sessionStorage.getItem('Reindeer-Names'));
-    console.log('users:', sessionNames);
-    console.log('sorted: ', sortGroup(sessionNames));
+    sortGroup(sessionNames);
   };
 
   const addBtnClick = (e) => {
