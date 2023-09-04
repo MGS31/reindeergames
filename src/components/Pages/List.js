@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { sortGroup } from '../../utils/sorter';
+import { useNavigate } from 'react-router-dom';
 import Input from '../../constants/Input';
 
 const List = () => {
@@ -12,6 +12,7 @@ const List = () => {
   ]);
   const [toggle, setToggle] = useState(false);
   const inputRef = useRef();
+  let navigate = useNavigate();
 
   const handleChange = (e, index) => {
     const values = [...formValues];
@@ -43,8 +44,8 @@ const List = () => {
       return [val.value];
     });
     sessionStorage.setItem('Reindeer-Names', JSON.stringify(users));
-    let sessionNames = JSON.parse(sessionStorage.getItem('Reindeer-Names'));
-    sortGroup(sessionNames);
+    let path = '/Results';
+    navigate(path);
   };
 
   const addBtnClick = (e) => {
