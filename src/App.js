@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from './components/Nav';
+import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './components/Pages/Home';
@@ -11,7 +11,7 @@ import Results from './components/Pages/Results';
 const App = () => {
   return (
     <Router>
-      <Nav />
+      <Dashboard />
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/Rules" Component={Rules} />
