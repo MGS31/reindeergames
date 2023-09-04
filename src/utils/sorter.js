@@ -1,18 +1,18 @@
 export const sortGroup = (array) => {
-  let result = [];
-  const recipients = array.slice();
-  const length = array.length;
-  for (let i = 0; i < length; i++) {
-    let sender = array[i];
-    let recipientIndex = Math.floor(Math.random() * recipients.length);
-    while (recipients[recipientIndex] === sender) {
-      recipientIndex = Math.floor(Math.random() * recipients.length);
+  let sortedGroup = [];
+  const receivers = array.slice();
+
+  for (let i = 0; i < array.length; i++) {
+    let giver = array[i];
+    let receiverIndex = Math.floor(Math.random() * receivers.length);
+    while (receivers[receiverIndex] === giver) {
+      receiverIndex = Math.floor(Math.random() * receivers.length);
     }
-    let recipient = recipients.splice(recipientIndex, 1)[0];
-    result.push({
-      sender: sender,
-      receiver: recipient,
+    let receiver = receivers.splice(receiverIndex, 1)[0];
+    sortedGroup.push({
+      sender: giver,
+      receiver: receiver,
     });
   }
-  return result;
+  return sortedGroup;
 };
