@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { sortGroup } from '../../utils/sorter';
 import Input from '../../constants/Input';
 
 const List = () => {
@@ -41,7 +42,10 @@ const List = () => {
     const users = formValues.map((val) => {
       return [val.value];
     });
-    sessionStorage.setItem('Reindeer-Names', users);
+    sessionStorage.setItem('Reindeer-Names', JSON.stringify(users));
+    let sessionNames = JSON.parse(sessionStorage.getItem('Reindeer-Names'));
+    console.log('users:', sessionNames);
+    console.log('sorted: ', sortGroup(sessionNames));
   };
 
   const addBtnClick = (e) => {
