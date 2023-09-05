@@ -1,7 +1,7 @@
 import React from 'react';
-import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import Nav from './components/Nav';
 import Home from './components/Pages/Home';
 import Rules from './components/Pages/Rules';
 import List from './components/Pages/List';
@@ -11,7 +11,7 @@ import Results from './components/Pages/Results';
 const App = () => {
   return (
     <Router>
-      <Dashboard />
+      <Nav />
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/Rules" Component={Rules} />
