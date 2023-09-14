@@ -20,17 +20,31 @@ const Nav = () => {
         </div>
       </div>
       <div className="link-nav">
-        <div className="Home">
-          <Link to="/"> Home </Link>
+        <div className="home">
+          <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/">
+            Home
+          </Link>
         </div>
-        <div className="Rules">
-          <Link to="/Rules"> Rules </Link>
+        <div className="rules">
+          <Link
+            style={{ color: 'inherit', textDecoration: 'none' }}
+            to="/Rules"
+          >
+            Rules
+          </Link>
         </div>
         <div className="create">
-          <Link to="/List"> Create Group </Link>
+          <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/List">
+            Create Group
+          </Link>
         </div>
         <div className="contact">
-          <Link to="/Contact"> Contact </Link>
+          <Link
+            style={{ color: 'inherit', textDecoration: 'none' }}
+            to="/Contact"
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </header>
