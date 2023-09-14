@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   color: white;
+  text-decoration: none;
 }
 
 .logo-nav {
@@ -21,5 +22,15 @@
 
 .link-nav {
   display: flex;
-  text-decoration: none;
+}
+
+.home,
+.rules,
+.create,
+.contact {
+  margin-right: 5px;
+  :hover {
+    text-decoration: underline;
+    font-weight: 200;
+  }
 }
