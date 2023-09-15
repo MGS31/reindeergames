@@ -4,10 +4,25 @@ html {
 }
 
 p,
-h3,
-h5,
+h4,
 h2,
-h1,
 li {
   color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.text-box{
+  padding-top: 100px;
+  padding-left: 35px;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  padding-right: 150px;
 }
