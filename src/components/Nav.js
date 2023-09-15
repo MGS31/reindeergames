@@ -21,30 +21,16 @@ const Nav = () => {
       </div>
       <div className="link-nav">
         <div className="home">
-          <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/">
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </div>
         <div className="rules">
-          <Link
-            style={{ color: 'inherit', textDecoration: 'none' }}
-            to="/Rules"
-          >
-            Rules
-          </Link>
+          <Link to="/Rules">Rules</Link>
         </div>
         <div className="create">
-          <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/List">
-            Create Group
-          </Link>
+          <Link to="/List">Create Group</Link>
         </div>
         <div className="contact">
-          <Link
-            style={{ color: 'inherit', textDecoration: 'none' }}
-            to="/Contact"
-          >
-            Contact
-          </Link>
+          <Link to="/Contact">Contact</Link>
         </div>
       </div>
     </header>
