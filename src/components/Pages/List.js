@@ -2,6 +2,8 @@ import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../constants/Input';
 
+import '../../styles/style.scss';
+
 const List = () => {
   const [formValues, setFormValues] = useState([
     {
@@ -54,36 +56,41 @@ const List = () => {
   };
 
   return (
-    <div>
-      <h1>Enter Reindeer Here:</h1>
-      <form onSubmit={handleSubmit}>
-        {formValues.map((obj, index) => (
-          <Input
-            key={index}
-            objValue={obj}
-            onChange={handleChange}
-            index={index}
-            deleteField={handleDeleteField}
-          />
-        ))}
-        {!toggle ? (
-          <div className="center">
-            <button className="add-btn" onClick={addBtnClick}>
-              Add Name
-            </button>
-          </div>
-        ) : (
-          <div className="dialog-box">
-            <input type="text" placeholder="Enter Name" ref={inputRef} />
-            <button className="add-btn" onClick={handleAddField}>
-              Add
-            </button>
-          </div>
-        )}
-        <button type="submit" className="submit-btn">
-          Submit
-        </button>
-      </form>
+    <div className="container">
+      <div className="text-box">
+        <h2>Enter Reindeer Here:</h2>
+        <form onSubmit={handleSubmit}>
+          {formValues.map((obj, index) => (
+            <Input
+              key={index}
+              objValue={obj}
+              onChange={handleChange}
+              index={index}
+              deleteField={handleDeleteField}
+            />
+          ))}
+          {!toggle ? (
+            <div className="center">
+              <button className="add-btn" onClick={addBtnClick}>
+                Add Name
+              </button>
+            </div>
+          ) : (
+            <div className="dialog-box">
+              <input type="text" placeholder="Enter Name" ref={inputRef} />
+              <button className="add-btn" onClick={handleAddField}>
+                Add
+              </button>
+            </div>
+          )}
+          <button type="submit" className="submit-btn">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div className="img">
+        <img alt="snowman" />
+      </div>
     </div>
   );
 };

@@ -14,9 +14,13 @@ const Results = () => {
   ));
 
   return (
-    <div>
+    <div className="container">
+      <div className="text-box"></div>
       <h2>Results:</h2>
       <ul>{groups}</ul>
+      <div className="img">
+        <img alt="snowmam" />
+      </div>
     </div>
   );
 };
