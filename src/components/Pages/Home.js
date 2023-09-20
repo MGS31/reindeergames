@@ -22,8 +22,28 @@ const Home = () => {
             <Link to="/List">Lets Get Started</Link>
           </h4>
         </div>
-        <div className="img">
-          <img alt="christmas tree" />
+        <div className="loop">
+          <img
+            className="green-tree"
+            alt="green-tree"
+            src="../images/GreenTree.png"
+            width={400}
+            height={400}
+          />
+          <img
+            className="red-tree"
+            alt="red-tree"
+            src="../images/RedTree.png"
+            width={400}
+            height={400}
+          />
+          <img
+            className="purple-tree"
+            alt="purple-tree"
+            src="../images/PurpleTree.png"
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </>
