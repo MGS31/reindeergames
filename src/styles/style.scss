@@ -21,8 +21,38 @@ li {
   padding-left: 35px;
 }
 
-.img {
-  display: flex;
-  align-items: center;
-  padding-right: 150px;
+.loop {
+  --time: 1s;
+  display: grid;
+}
+
+/* show animation only if user hasn't set a preference,
+  otherwise just show stacked images */
+@media (prefers-reduced-motion: no-preference) {
+ .loop img {   
+   grid-area: 1/1;
+   animation: fade calc(var(--time) * 3) linear 0s infinite;
+ }
+  
+ .loop img:nth-child(2) { animation-delay: calc(var(--time) * -2); }
+ .loop img:nth-child(3) { animation-delay: calc(var(--time) * -1); }
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  25% { opacity: 1; }
+  75% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.green-tree {
+  padding: 5px;
+}
+
+.red-tree {
+padding: 25px;
+}
+
+.purple-tree {
+  padding: 45px;
 }
