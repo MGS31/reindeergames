@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.text-box{
+  padding-top: 100px;
+  padding-left: 35px;
+}
+
+.loop-presents {
+  height: auto;
+  width: 400px;
+  --time: 1s;
+  display: grid;
+}
+
+/* show animation only if user hasn't set a preference,
+  otherwise just show stacked images */
+@media (prefers-reduced-motion: no-preference) {
+ .loop-presents img {   
+   grid-area: 1/1;
+   animation: fade calc(var(--time) * 3) linear 2s infinite;
+ }
+  
+ .loop-presents img:nth-child(2) { animation-delay: calc(var(--time) * -5); }
+ .loop-presents img:nth-child(3) { animation-delay: calc(var(--time) * -4); }
+ .loop-presents img:nth-child(4) { animation-delay: calc(var(--time) * -3); }
+ .loop-presents img:nth-child(5) { animation-delay: calc(var(--time) * -2); }
+ .loop-presents img:nth-child(6) { animation-delay: calc(var(--time) * -1); }
+}
+
+@keyframes fade {
+  0% { opacity: 0.5; }
+  25% { opacity: 1; }
+  75% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
