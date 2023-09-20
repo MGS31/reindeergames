@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../../styles/style.scss';
+import '../../styles/home.scss';
 
 const Home = () => {
   return (
@@ -19,7 +20,9 @@ const Home = () => {
             Look no further than Reindeer Games! Click Below to get started!
           </p>
           <h4>
-            <Link to="/List">Lets Get Started</Link>
+            <Link className="get-started-btn" to="/List">
+              Lets Get Started
+            </Link>
           </h4>
         </div>
         <div className="loop">
@@ -27,22 +30,22 @@ const Home = () => {
             className="green-tree"
             alt="green-tree"
             src="../images/GreenTree.png"
-            width={400}
-            height={400}
+            width={465}
+            height={465}
           />
           <img
             className="red-tree"
             alt="red-tree"
             src="../images/RedTree.png"
-            width={400}
-            height={400}
+            width={465}
+            height={465}
           />
           <img
             className="purple-tree"
             alt="purple-tree"
             src="../images/PurpleTree.png"
-            width={400}
-            height={400}
+            width={465}
+            height={465}
           />
         </div>
       </div>

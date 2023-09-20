@@ -8,7 +8,7 @@ const Nav = () => {
     <header className="top">
       <div className="logo-nav">
         <div className="logo-image">
-          <img src={''} alt="Logo" />
+          <img src={'/images/Frame 2.png'} alt="Logo" />
         </div>
         <div className="app-title">
           <h1>
