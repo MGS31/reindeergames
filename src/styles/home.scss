@@ -1,5 +1,7 @@
-.container {
+.home-box {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .loop {
@@ -26,16 +28,12 @@
   100% { opacity: 0; }
 }
 
-.green-tree {
-  padding: 5px;
-}
-
 .red-tree {
-padding: 10px;
+  margin-left: 100px;
 }
 
 .purple-tree {
-  padding-bottom: 20px;
+  margin-left: 200px;
 }
 
 
