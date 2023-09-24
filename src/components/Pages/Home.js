@@ -7,7 +7,7 @@ import '../../styles/home.scss';
 const Home = () => {
   return (
     <>
-      <div className="container">
+      <div className="home-box">
         <div className="text-box">
           <h2>Welcome to ReindeerGames!</h2>
           <p>The easiest way to get your holiday games started</p>
