@@ -1,25 +1,28 @@
 .top {
-  position: sticky;
+  position: fixed;
+  color: white;
+  text-decoration: none;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  text-decoration: none;
-  height: 100px;
 }
 
 .logo-nav {
   display: flex;
   align-items: center;
-}
-
-.app-title {
-  display: flex;
-  padding-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .link-nav {
   display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
 a {
