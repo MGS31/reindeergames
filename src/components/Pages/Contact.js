@@ -16,7 +16,7 @@ const Contact = () => {
         </ul>
       </div>
       <div className="img">
-        <img alt="reindeer" />
+        <img src={'/images/Frame 2.png'} alt="Logo" />
       </div>
     </div>
   );
