@@ -1,25 +1,33 @@
 import React from 'react';
 import { sortGroup } from '../../utils/sorter';
 
+import '../../styles/style.scss';
+import '../../styles/results.scss';
+
 const Results = () => {
   let sessionNames = JSON.parse(sessionStorage.getItem('Reindeer-Names'));
   let results = sortGroup(sessionNames);
 
   let groups = results.map((group) => (
     <li>
-      <span>Sender: {group.sender}</span>
-      <span> </span>
-      <span>Reciever: {group.receiver}</span>
+      <p>Sender: {group.sender}</p>
+      <p>Reciever: {group.receiver}</p>
     </li>
   ));
 
   return (
-    <div className="container">
-      <div className="text-box"></div>
+    <div className="result-box">
+      <div className="result-text"></div>
       <h2>Results:</h2>
-      <ul>{groups}</ul>
-      <div className="img">
-        <img alt="snowmam" />
+      <ol>{groups}</ol>
+      <div className="result-img">
+        <img
+          className="snowman3"
+          alt="snowman3"
+          src="../images/snowman/snowman3.png"
+          width={400}
+          height={400}
+        />
       </div>
     </div>
   );
