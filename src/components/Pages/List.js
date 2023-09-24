@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Input from '../../constants/Input';
 
 import '../../styles/style.scss';
+import '../../styles/form.scss';
+import '../../styles/checkmark.scss';
 
 const List = () => {
   const [formValues, setFormValues] = useState([
@@ -56,42 +58,56 @@ const List = () => {
   };
 
   return (
-    <div className="container">
-      <div className="text-box">
-        <h2>Enter Reindeer Here:</h2>
-        <form onSubmit={handleSubmit}>
-          {formValues.map((obj, index) => (
-            <Input
-              key={index}
-              objValue={obj}
-              onChange={handleChange}
-              index={index}
-              deleteField={handleDeleteField}
-            />
-          ))}
-          {!toggle ? (
-            <div className="center">
-              <button className="add-btn" onClick={addBtnClick}>
-                Add Name
-              </button>
-            </div>
-          ) : (
-            <div className="dialog-box">
-              <input type="text" placeholder="Enter Name" ref={inputRef} />
-              <button className="add-btn" onClick={handleAddField}>
-                Add
-              </button>
-            </div>
-          )}
-          <button type="submit" className="submit-btn">
-            Submit
-          </button>
-        </form>
+    <>
+      <div className="form">
+        <div className="form-text">
+          <h2>Enter Reindeer Here:</h2>
+          <form className="input-form" onSubmit={handleSubmit}>
+            {formValues.map((obj, index) => (
+              <Input
+                key={index}
+                objValue={obj}
+                onChange={handleChange}
+                index={index}
+                deleteField={handleDeleteField}
+              />
+            ))}
+            {!toggle ? (
+              <div className="center">
+                <button className="add-name" onClick={addBtnClick}>
+                  Add Name
+                </button>
+              </div>
+            ) : (
+              <div className="dialog-box">
+                <input
+                  className="input-text"
+                  type="text"
+                  placeholder="Enter Name"
+                  ref={inputRef}
+                />
+                <button className="add-btn" onClick={handleAddField}>
+                  <span class="checkmark">
+                    <div class="checkmark_stem"></div>
+                    <div class="checkmark_kick"></div>
+                  </span>
+                </button>
+              </div>
+            )}
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+          </form>
+        </div>
+        <img
+          className="snowman1"
+          alt="snowman1"
+          src="../images/snowman/snowman1.png"
+          width={400}
+          height={400}
+        />
       </div>
-      <div className="img">
-        <img alt="snowman" />
-      </div>
-    </div>
+    </>
   );
 };
 
