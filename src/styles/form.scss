@@ -1,0 +1,105 @@
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.snowman1 {
+  width: auto;
+}
+
+.snowman2 {
+  width: auto;
+}
+
+.snowman3 {
+  width: auto;
+  margin-right: 25px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  margin-left: 19px;
+  color: white;
+}
+
+.dialog-box {
+  display: flex;
+  align-items: center;
+}
+
+.input-text {
+  padding-right: 5px;
+}
+
+.add-btn {
+  margin-left: 15px;
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.add-name {
+  margin-top: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.remove-btn{
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+input[type=text]{
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius:10px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+  width: 150px;
+}
+
+input[type=text]:hover {
+border: 1px solid #B8FD88;
+}
