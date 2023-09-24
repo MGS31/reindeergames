@@ -6,7 +6,7 @@ import '../../styles/presents.scss';
 const Rules = () => {
   return (
     <>
-      <div className="container">
+      <div className="rules-box">
         <div className="text-box">
           <h2 className="rules-header">Here Are The Rules:</h2>
           <p>
@@ -35,45 +35,47 @@ const Rules = () => {
                 className="green-present"
                 alt="green-present"
                 src="../images/Presents/GreenPresent.png"
-                width={175}
-                height={175}
+                width={150}
+                height={150}
               />
               <img
                 className="red-present"
                 alt="red-present"
                 src="../images/Presents/RedPresent.png"
-                width={175}
-                height={175}
+                width={150}
+                height={150}
               />
+            </div>
+            <div className="presents-2">
               <img
                 className="purple-present"
                 alt="purple-present"
                 src="../images/Presents/PurplePresent.png"
-                width={175}
-                height={175}
+                width={150}
+                height={150}
               />
               <img
                 className="yellow-present"
                 alt="yellow-present"
                 src="../images/Presents/YellowPresent.png"
-                width={175}
-                height={175}
+                width={150}
+                height={150}
               />
             </div>
-            <div className="presents-2">
+            <div className="presents-3">
               <img
                 className="blue-present"
                 alt="blue-present"
                 src="../images/Presents/BluePresent.png"
-                width={175}
-                height={175}
+                width={150}
+                height={150}
               />
               <img
                 className="orange-present"
                 alt="orange-present"
                 src="../images/Presents/OrangePresent.png"
-                width={175}
-                height={175}
+                width={150}
+                height={150}
               />
             </div>
           </div>
