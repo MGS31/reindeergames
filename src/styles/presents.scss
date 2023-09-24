@@ -1,17 +1,10 @@
-.container {
+.rules-box {
   display: flex;
-  justify-content: space-around;
-  align-content: center;
-}
-
-.text-box{
-  padding-top: 100px;
-  padding-left: 35px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .loop-presents {
-  height: auto;
-  width: 400px;
   --time: 1s;
   display: grid;
 }
@@ -21,14 +14,11 @@
 @media (prefers-reduced-motion: no-preference) {
  .loop-presents img {   
    grid-area: 1/1;
-   animation: fade calc(var(--time) * 3) linear 2s infinite;
+   animation: fade calc(var(--time) * 2) linear 0s infinite;
  }
   
- .loop-presents img:nth-child(2) { animation-delay: calc(var(--time) * -5); }
- .loop-presents img:nth-child(3) { animation-delay: calc(var(--time) * -4); }
- .loop-presents img:nth-child(4) { animation-delay: calc(var(--time) * -3); }
- .loop-presents img:nth-child(5) { animation-delay: calc(var(--time) * -2); }
- .loop-presents img:nth-child(6) { animation-delay: calc(var(--time) * -1); }
+ .loop-presents img:nth-child(2) { animation-delay: calc(var(--time) * -2); }
+ .loop-presents img:nth-child(3) { animation-delay: calc(var(--time) * -1); }
 }
 
 @keyframes fade {
