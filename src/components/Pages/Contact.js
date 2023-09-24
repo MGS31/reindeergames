@@ -1,10 +1,11 @@
 import React from 'react';
 
 import '../../styles/style.scss';
+import '../../styles/contact.scss';
 
 const Contact = () => {
   return (
-    <div className="container">
+    <div className="contact-box">
       <div className="text-box">
         <h2>Contact</h2>
         <p>For any questions concerns of feedback please contact us here:</p>
