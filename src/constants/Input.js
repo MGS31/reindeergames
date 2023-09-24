@@ -1,11 +1,13 @@
 import React from 'react';
 
+import '../styles/form.scss';
+
 const Input = ({ objValue, onChange, index, deleteField }) => {
   const { label, type, value } = objValue;
 
   return (
     <div className="input-group">
-      <div className="input">
+      <div className="input-box">
         <input
           label={label || 'Name'}
           type={type || 'text'}
@@ -13,7 +15,9 @@ const Input = ({ objValue, onChange, index, deleteField }) => {
           value={value || ''}
           onChange={(e) => onChange(e, index)}
         />
-        <div onClick={(e) => deleteField(e, index)}>X</div>
+        <div className="remove" onClick={(e) => deleteField(e, index)}>
+          <button className="remove-btn">X</button>
+        </div>
       </div>
     </div>
   );
