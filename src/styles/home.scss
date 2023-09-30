@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 60px;
 }
 
 .loop {
@@ -38,13 +39,14 @@
 
 
 .get-started-btn {
-    background-color: #B8FD88; /* Green */
-    border: none;
-    color: #1C5240;
-    padding: 15px 22px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 15px;
+  text-decoration: underline ;
+  background-color: #B8FD88; /* Green */
+  border: none;
+  color: #1C5240;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
 }

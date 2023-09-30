@@ -1,20 +1,7 @@
 .form {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.snowman1 {
-  width: auto;
-}
-
-.snowman2 {
-  width: auto;
-}
-
-.snowman3 {
-  width: auto;
-  margin-right: 25px;
+  justify-content: space-around;
+  margin-top: 80px;
 }
 
 .input-box {
@@ -49,6 +36,43 @@
     border-radius: 20px;
 }
 
+.add-btn:hover {
+  margin-left: 15px;
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.remove-btn{
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.remove-btn:hover{
+  background-color: #B8FD88; /* Green */
+    border: none;
+    color: #1C5240;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .add-name {
   margin-top: 15px;
   width: 200px;
@@ -79,17 +103,21 @@
     border-radius: 15px;
 }
 
-.remove-btn{
+.submit-btn:hover, .add-name:hover {
+  margin-top: 15px;
+  width: 200px;
+  height: 40px;
   background-color: #B8FD88; /* Green */
     border: none;
     color: #1C5240;
-    padding: 5px 10px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 20px;
-}
+    border-radius: 10px;
+  cursor: pointer;
+ }
 
 input[type=text]{
   padding: 10px;
