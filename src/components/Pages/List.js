@@ -75,7 +75,7 @@ const List = () => {
             {!toggle ? (
               <div className="center">
                 <button className="add-name" onClick={addBtnClick}>
-                  Add Name
+                  Add More!
                 </button>
               </div>
             ) : (
