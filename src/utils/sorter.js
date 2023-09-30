@@ -1,6 +1,10 @@
 export const sortGroup = (array) => {
   let sortedGroup = [];
-  const receivers = array.slice();
+  const receivers = [...array];
+
+  if (array.length <= 1) {
+    return null;
+  }
 
   for (let i = 0; i < array.length; i++) {
     let giver = array[i];
