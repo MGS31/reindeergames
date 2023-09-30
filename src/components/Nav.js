@@ -6,17 +6,13 @@ import '../styles/nav.scss';
 const Nav = () => {
   return (
     <header className="top">
-      <div className="logo-nav">
+      <div className="nav-Logo">
         <div className="logo-image">
           <img src={'/images/Frame 2.png'} alt="Logo" />
         </div>
         <div className="app-title">
-          <h1>
-            Reindeer
-            <span className="Games">
-              <span>Games</span>
-            </span>
-          </h1>
+          <h1>Reindeer</h1>
+          <h1>Games</h1>
         </div>
       </div>
       <div className="link-nav">
