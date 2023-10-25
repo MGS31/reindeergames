@@ -23,7 +23,7 @@ const Nav = () => {
           <Link to="/Rules">Rules</Link>
         </div>
         <div className="create">
-          <Link to="/List">Create Group</Link>
+          <Link to="/Group">Create Group</Link>
         </div>
         <div className="contact">
           <Link to="/Contact">Contact</Link>

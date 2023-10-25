@@ -9,6 +9,7 @@ import Rules from './components/Pages/Rules';
 import List from './components/Pages/List';
 import Contact from './components/Pages/Contact';
 import Results from './components/Pages/Results';
+import Group from './components/Pages/Group';
 
 import '../src/styles/style.scss';
 
@@ -53,6 +54,7 @@ const App = () => {
           <Route path="/" Component={Home} />
           <Route path="/Rules" Component={Rules} />
           <Route path="/List" Component={List} />
+          <Route path="/Group" Component={Group} />
           <Route path="/Contact" Component={Contact} />
           <Route path="/Results" Component={Results} />
         </Routes>

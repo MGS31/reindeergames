@@ -17,7 +17,7 @@ const Home = () => {
         </p>
         <p>Look no further than Reindeer Games! Click Below to get started!</p>
         <h4>
-          <Link className="get-started-btn" to="/List">
+          <Link className="get-started-btn" to="/Group">
             Lets Get Started
           </Link>
         </h4>

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../constants/Input';
 
@@ -13,9 +13,13 @@ const List = () => {
       type: 'text',
       value: '',
     },
+    {
+      label: 'Email',
+      type: 'text',
+      value: '',
+    },
   ]);
   const [toggle, setToggle] = useState(false);
-  const inputRef = useRef();
   let navigate = useNavigate();
 
   const handleChange = (e, index) => {
@@ -27,19 +31,27 @@ const List = () => {
   const handleAddField = (e) => {
     e.preventDefault();
     const values = [...formValues];
-    values.push({
-      label: inputRef.current.value || 'Name',
-      type: 'text',
-      value: inputRef.current.value || '',
-    });
+    values.push(
+      {
+        label: 'Name:',
+        type: 'text',
+        value: '',
+      },
+      {
+        label: 'Email:',
+        type: 'text',
+        value: '',
+      }
+    );
     setFormValues(values);
     setToggle(false);
   };
 
-  const handleDeleteField = (e, index) => {
+  const handleDeleteField = (e) => {
+    e.preventDefault();
     const values = [...formValues];
-    values.splice(index, 1);
-    setFormValues(values);
+    let newValues = values.slice(0, -1).slice(0, -1);
+    setFormValues(newValues);
   };
 
   const handleSubmit = (e) => {
@@ -50,11 +62,6 @@ const List = () => {
     sessionStorage.setItem('Reindeer-Names', JSON.stringify(users));
     let path = '/Results';
     navigate(path);
-  };
-
-  const addBtnClick = (e) => {
-    e.preventDefault();
-    setToggle(true);
   };
 
   return (
@@ -69,29 +76,28 @@ const List = () => {
                 objValue={obj}
                 onChange={handleChange}
                 index={index}
-                deleteField={handleDeleteField}
               />
             ))}
+            <button className="add-name" onClick={handleAddField}>
+              Add More!
+            </button>
             {!toggle ? (
               <div className="center">
-                <button className="add-name" onClick={addBtnClick}>
-                  Add More!
-                </button>
+                <div className="remove" onClick={handleDeleteField}>
+                  <button className="remove-btn">X</button>
+                </div>
               </div>
             ) : (
               <div className="dialog-box">
-                <input
-                  className="input-text"
-                  type="text"
-                  placeholder="Enter Name"
-                  ref={inputRef}
-                />
-                <button className="add-btn" onClick={handleAddField}>
-                  <span class="checkmark">
-                    <div class="checkmark_stem"></div>
-                    <div class="checkmark_kick"></div>
-                  </span>
-                </button>
+                {formValues.map((obj, index) => (
+                  <Input
+                    key={index}
+                    objValue={obj}
+                    onChange={handleChange}
+                    index={index}
+                    deleteField={handleDeleteField}
+                  />
+                ))}
               </div>
             )}
             <button type="submit" className="submit-btn">
